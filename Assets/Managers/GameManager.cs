@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
+    public string InitialSceneName;
+
     #region SINGLETON PATTERN 
     private static int m_referenceCount = 0;
 
@@ -56,13 +58,23 @@ public class GameManager : MonoBehaviour
     private Dictionary<string, object> m_gameStoryVariables = new Dictionary<string, object>();
 
     /// <summary>
-    /// Adds a game story variable to the dictionary.
+    /// Adds or updates a game story variable to the dictionary.
+    /// If the key does not exist, it will be added.
+    /// If the key does exist, the value will be updated.
     /// </summary>
     /// <param name="key">The key of the game story variable (e.g. b_HasCompletedPuzzle</param>
     /// <param name="value">The value, returned as an object (can be bool, string, etc.)</param>
-    public void AddGameStoryVariable(string key, object value)
+    public void SetGameStoryVariable(string key, object value)
     {
-        m_gameStoryVariables.Add(key, value);
+        if (m_gameStoryVariables.ContainsKey(key))
+        {
+            m_gameStoryVariables[key] = value;
+        }
+        else
+        {
+            m_gameStoryVariables.Add(key, value);
+        }
+        Debug.Log("SetGameStoryVariable: " + key + " = " + value.ToString() + " Of type: " + value.GetType().ToString());
     }
 
     /// <summary>
@@ -126,6 +138,29 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    #region GAME AUDIO
+    /// <summary>
+    /// Plays the given audio clip.
+    /// </summary>
+    /// <param name="clip">The audio clip to play.</param>
+    public void PlaySFX(AudioClip clip)
+    {
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
+    }
+
+    /// <summary>
+    /// Plays the given audio clip as background music.
+    /// </summary>
+    /// <param name="clip">The audio clip to play.</param>
+    public void PlayBGM(AudioClip clip)
+    {
+        AudioSource bgmSource = Camera.main.GetComponent<AudioSource>();
+        bgmSource.clip = clip;
+        bgmSource.Play();
+    }
+    #endregion
+
+    #region GAME SCENE MANAGEMENT
     /// <summary>
     /// Loads the scene with the given name.
     /// </summary>
@@ -134,10 +169,13 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
+    #endregion
 
+    /// <summary>
+    /// When we start the game, let's load the initial scene.
+    /// </summary>
     void Start()
     {
-        LoadScene("Brig");
+        LoadScene(InitialSceneName);
     }
-
 }

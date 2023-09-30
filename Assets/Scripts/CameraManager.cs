@@ -20,14 +20,11 @@ public class CameraManager : MonoBehaviour
         // Set the right extent to the right edge of the sprite background which is the parent
         RightExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.max.x;
 
-        // Calculate the center offset which is the center of the screen minus one half the width of the screen
-        m_CenterOffset = (Screen.width / 2.0f) - LeftExtent;
-
         // Add a 1 unit buffer to the left and right extents so the camera doesn't go off screen
         LeftExtent += BufferOffset;
         RightExtent -= BufferOffset;
 
-        Debug.Log("LeftExtent: " + LeftExtent + " RightExtent: " + RightExtent);
+        // TODO IDEALLY CALCULATE THIS BASED ON THE SIZE OF THE CAMERA and the size of the background, for now this works...
     }
 
     // Update is called once per frame

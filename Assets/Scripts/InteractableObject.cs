@@ -1,0 +1,92 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class InteractableObject : MonoBehaviour
+{
+    [Header("Game Story On Interact")]
+    // Whether or not this object should set a game story variable when interacted with
+    public bool ShouldSetGameStoryVariableOnInteract = false;
+    public string GameStoryVariableKey = "";            // The key of the game story variable to set
+    public EGameVariableType GameStoryVariableType;     // The type of the game story variable to set
+    public string GameStoryVariableValue = null;        // The value of the game story variable to set, this script will handle casting.
+
+    [Header("Destruction On Interact")]
+    // Whether or not this object should destroy itself when interacted with
+    public bool ShouldDestroyOnInteract = false;
+
+    [Header("Scene Load On Interact")]
+    // Whether or not this object should load a scene when interacted with
+    public bool ShouldLoadSceneOnInteract = false;
+    public string SceneName = "";                       // The name of the scene to load
+
+    [Header("SFX on Interact")]
+    // Whether or not this object should play a sound effect when interacted with
+    public bool ShouldPlaySFXOnInteract = false;
+    public AudioClip SFXClip = null;                    // The audio clip to play
+
+    [Header("SFX on Hover")]
+    // Whether or not this object should play a sound effect when hovered over
+    public bool ShouldPlaySFXOnHover = false;          // Whether or not this object should play a sound effect when hovered over
+    public AudioClip HoverSFXClip = null;               // The audio clip to play
+
+    /// <summary>
+    /// This is the function that is called when an interactable object is interacted with.
+    /// </summary>
+    public void Interact()
+    {
+        // Set the game story variable if we should
+        if (ShouldSetGameStoryVariableOnInteract)
+        {
+            switch (GameStoryVariableType)
+            {
+                case EGameVariableType.Bool:
+                    GameManager.Instance.SetGameStoryVariable(GameStoryVariableKey, bool.Parse(GameStoryVariableValue));
+                    break;
+                case EGameVariableType.Int:
+                    GameManager.Instance.SetGameStoryVariable(GameStoryVariableKey, int.Parse(GameStoryVariableValue));
+                    break;
+                case EGameVariableType.Float:
+                    GameManager.Instance.SetGameStoryVariable(GameStoryVariableKey, float.Parse(GameStoryVariableValue));
+                    break;
+                case EGameVariableType.String:
+                    GameManager.Instance.SetGameStoryVariable(GameStoryVariableKey, GameStoryVariableValue);
+                    break;
+            }
+        }
+
+        // Load a scene if we should
+        if (ShouldLoadSceneOnInteract)
+        {
+            GameManager.Instance.LoadScene(SceneName);
+        }
+
+        // Play a sound effect if we should
+        if (ShouldPlaySFXOnInteract)
+        {
+            GameManager.Instance.PlaySFX(SFXClip);
+        }
+
+        // Finally, destroy ourselves if we should
+        if (ShouldDestroyOnInteract)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnMouseDown()
+    {
+        Interact();
+    }
+
+    void OnMouseOver()
+    {
+        // Play a sound effect if we should when hovered over
+        if (ShouldPlaySFXOnHover)
+        {
+            GameManager.Instance.PlaySFX(HoverSFXClip);
+        }
+    }
+
+
+}
