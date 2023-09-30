@@ -7,23 +7,25 @@ namespace LemApperson.TornPaper
 {
     public class TornPaperPiece : MonoBehaviour, IDragHandler, IEndDragHandler, IBeginDragHandler
     {
+        private Camera _mainCamera;
         // Use USPS TornPaper Abbreviations
         [SerializeField] public string _TornPaperName;
         private Vector3 _initialPosition;
         private Image _image;
-        public bool _reachedTornPaperSlot , _isWiggling;
+        public bool _reachedTornPaperSlot ;
 
         void Start()
         {
+            _mainCamera = Camera.main;
             _image = GetComponent<Image>();
-            _initialPosition = transform.position;
-            _isWiggling = false;
-            StartCoroutine(Wiggling());
         }
 
         public void OnDrag(PointerEventData eventData)
         {
-            transform.position = eventData.position;
+            Vector3 screenPoint = new Vector3(eventData.position.x, eventData.position.y, _mainCamera.WorldToScreenPoint(transform.position).z);
+            Vector3 worldPosition = _mainCamera.ScreenToWorldPoint(screenPoint);
+            transform.position = worldPosition;
+            //transform.position = eventData.position;
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -40,17 +42,7 @@ namespace LemApperson.TornPaper
             temp.a = 0.5f;
             _image.color = temp;
             _image.raycastTarget = false;
-            _isWiggling = false;
         }
 
-        private IEnumerator Wiggling()
-        {
-            while(_isWiggling) {
-                transform.position += new Vector3(UnityEngine.Random.Range(1f, 15f), UnityEngine.Random.Range(1f, 15f), 0);
-                yield return new WaitForSeconds(0.3f);
-                transform.position = _initialPosition;
-                yield return new WaitForSeconds(Random.Range(0.5f, 1f));
-            }
-        }
     }
 }
