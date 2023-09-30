@@ -15,7 +15,7 @@ namespace LemApperson.TornPaper
         void Start() {
             for (int i = 0; i < 36; i++) {
                 GameObject _button = Instantiate(_buttonPrefab, transform);
-                _button.transform.parent = transform;
+                _button.transform.SetParent(transform);
                 _button.name = "Button" + i;
                 _button.GetComponent<BattleShipButton>().SetButtonID(i);
             }
@@ -47,6 +47,10 @@ namespace LemApperson.TornPaper
         private void GameWon() {
             // GameManager.Instance.GameWon();
            _gameWon = true;
+           BattleShipButton[] _buttons = GetComponentsInChildren<BattleShipButton>();
+           for (int i = 0; i < _buttons.Length; i++) {
+               _buttons[i].SetButtonState(true);
+           }
         }
     }
 }
