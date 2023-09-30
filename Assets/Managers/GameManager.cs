@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-// using SubGame;
+
+public class GameStoryVariableChangeEvent : UnityEngine.Events.UnityEvent<string, object> { }
 
 public class GameManager : MonoBehaviour
 {
+
+    public string InitialSceneName;
+    private string m_CurrentSceneName; //Used for saving / loading...
 
     #region SINGLETON PATTERN 
     private static int m_referenceCount = 0;
@@ -54,15 +58,29 @@ public class GameManager : MonoBehaviour
     #region GAME STORY VARIABLES
     [SerializeField]
     private Dictionary<string, object> m_gameStoryVariables = new Dictionary<string, object>();
+    public GameStoryVariableChangeEvent OnGameStoryVariableChanged = new GameStoryVariableChangeEvent();
+
 
     /// <summary>
-    /// Adds a game story variable to the dictionary.
+    /// Adds or updates a game story variable to the dictionary.
+    /// If the key does not exist, it will be added.
+    /// If the key does exist, the value will be updated.
     /// </summary>
     /// <param name="key">The key of the game story variable (e.g. b_HasCompletedPuzzle</param>
     /// <param name="value">The value, returned as an object (can be bool, string, etc.)</param>
-    public void AddGameStoryVariable(string key, object value)
+    public void SetGameStoryVariable(string key, object value)
     {
-        m_gameStoryVariables.Add(key, value);
+        if (m_gameStoryVariables.ContainsKey(key))
+        {
+            m_gameStoryVariables[key] = value;
+        }
+        else
+        {
+            m_gameStoryVariables.Add(key, value);
+        }
+        Debug.Log("SetGameStoryVariable: " + key + " = " + value.ToString() + " Of type: " + value.GetType().ToString());
+        //Fire an event when a game story variable is set, so that other scripts can react to it.
+        OnGameStoryVariableChanged.Invoke(key, value);
     }
 
     /// <summary>
@@ -85,7 +103,16 @@ public class GameManager : MonoBehaviour
     /// <returns>The object of a given type.</returns>
     public T GetGameStoryVariable<T>(string key)
     {
-        return (T)m_gameStoryVariables[key];
+        Debug.Log("Checking with key: " + key);
+        if (!m_gameStoryVariables.ContainsKey(key))
+        {
+            return default(T);
+        }
+        else
+        {
+            object found = (T)m_gameStoryVariables[key];
+            return (T)m_gameStoryVariables[key];
+        }
     }
     #endregion
 
@@ -95,10 +122,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void SaveGame()
     {
+        // Save all of the game story variables to PlayerPrefs
         foreach (KeyValuePair<string, object> kvp in m_gameStoryVariables)
         {
             PlayerPrefs.SetString(kvp.Key, kvp.Value.ToString());
         }
+        // Save which scene we are currently in
+        PlayerPrefs.SetString("CurrentScene", m_CurrentSceneName);
     }
 
     /// <summary>
@@ -122,10 +152,13 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        // Load the save game scene
+        LoadScene(PlayerPrefs.GetString("CurrentScene"));
     }
 
     #endregion
 
+    #region GAME SCENE MANAGEMENT
     /// <summary>
     /// Loads the scene with the given name.
     /// </summary>
@@ -133,11 +166,16 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        m_CurrentSceneName = sceneName;
+        SaveGame();                         // Save the game on a scene change.
     }
+    #endregion
 
+    /// <summary>
+    /// When we start the game, let's load the initial scene.
+    /// </summary>
     void Start()
     {
-        LoadScene("Brig");
+        LoadScene(InitialSceneName);
     }
-
 }
