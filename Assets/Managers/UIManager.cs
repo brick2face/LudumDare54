@@ -61,6 +61,60 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     public GameObject m_FadePanel;
 
+    // A UI Panel that allows us to display a UI panel from another scene.
+    private GameObject m_IncomingPanel;
+
+    #region HANDLE EXTERNAL PANELS
+
+    /// <summary>
+    /// This function will set the UI Manager for an incoming panel.
+    /// </summary>
+    /// <param name="panel">The panel you want to display. ONLY a Panel please, no Canvases.</param>
+    public void SetUIPanel(GameObject panel)
+    {
+        m_IncomingPanel = panel;
+    }
+
+    /// <summary>
+    /// This function will display the panel that was set by SetUIPanel.
+    /// </summary>
+    public void DisplayPanel()
+    {
+        SetIncomingPanelActive();
+    }
+
+    /// <summary>
+    /// This function will hide the panel that was set by SetUIPanel.
+    /// </summary>
+    public void HidePanel()
+    {
+        SetIncomingPanelInactive();
+    }
+
+    /// <summary>
+    /// This function will set the incoming panel to be active.
+    /// </summary>
+    /// <param name="panel">The panel to set active.</param>
+    private void SetIncomingPanelActive()
+    {
+        m_IncomingPanel.SetActive(true);
+    }
+
+    /// <summary>
+    /// This function will set the incoming panel to be inactive.
+    /// </summary>
+    private void SetIncomingPanelInactive()
+    {
+        if (m_IncomingPanel != null)
+        {
+            m_IncomingPanel.SetActive(false);
+            m_IncomingPanel = null;
+        }
+    }
+
+    #endregion
+
+    #region FADING
     /// <summary>
     /// This function will fade the screen to black over the specified duration.
     /// </summary>
@@ -114,5 +168,7 @@ public class UIManager : MonoBehaviour
 
         if (isFadeToBlack) OnFadeFinished.Invoke();
     }
+
+    #endregion
 
 }
