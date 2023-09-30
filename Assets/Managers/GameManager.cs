@@ -169,15 +169,28 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region GAME SCENE MANAGEMENT
+
+    private bool m_IsFading = false;
     /// <summary>
     /// Loads the scene with the given name.
     /// </summary>
     /// <param name="sceneName">SceneName</param>
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
-        m_CurrentSceneName = sceneName;
-        SaveGame();                         // Save the game on a scene change.
+        UIManager.Instance.FadeToBlack(2.0f);
+        m_IsFading = true;
+
+        // Wait for the fade to finish
+        UIManager.Instance.OnFadeFinished.AddListener((_fade) =>
+        {
+            if (m_IsFading)
+            {
+                SceneManager.LoadScene(sceneName);
+                m_CurrentSceneName = sceneName;
+                SaveGame();                         // Save the game on a scene change.
+                m_IsFading = false;
+            }
+        });
     }
     #endregion
 

@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &366633397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7150154372246772143, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
+  m_PrefabInstance: {fileID: 5473607737842802114}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &794795817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -463,6 +468,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1817506751}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7150154372246772143, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5473607737842802116}
     - targetCorrespondingSourceObject: {fileID: 4330323576086716, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1197392485}
@@ -472,6 +480,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5529568793766715613, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
   m_PrefabInstance: {fileID: 5473607737842802114}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5473607737842802116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366633397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f15fad5d94b40e478248d8e885b325b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7353641564019834699
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,8 +616,8 @@ MonoBehaviour:
   ShouldConsumeInventoryItemOnInteract: 1
   InventoryItemToConsume: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
   InventoryItemConsumeQuantity: 1
-  ShouldLoadSceneOnInteract: 0
-  SceneName: 
+  ShouldLoadSceneOnInteract: 1
+  SceneName: Brig
   ShouldPlaySFXOnInteract: 1
   SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
   ShouldPlaySFXOnHover: 0
