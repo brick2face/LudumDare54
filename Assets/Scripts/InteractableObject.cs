@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour
 {
+    [Header("Display Properties")]
+    public bool RequiresVariableToDisplay = false;      // Whether or not this object requires a game story variable to be set to display
+    public string ExpectedVariableKey = "";            // The key of the game story variable to check
+    public EGameVariableType ExpectedVariableType;     // The type of the game story variable to check
+    public string ExpectedVariableValue = null;        // The value of the game story variable to check, this script will handle casting.
+
     [Header("Game Story On Interact")]
     // Whether or not this object should set a game story variable when interacted with
     public bool ShouldSetGameStoryVariableOnInteract = false;
@@ -71,6 +77,47 @@ public class InteractableObject : MonoBehaviour
         if (ShouldDestroyOnInteract)
         {
             Destroy(gameObject);
+        }
+    }
+
+    void Awake()
+    {
+        // We should check whether this object should be displayed or not
+        if (RequiresVariableToDisplay)
+        {
+            CheckDisplay();
+        }
+    }
+
+    void CheckDisplay()
+    {
+
+        switch (ExpectedVariableType)
+        {
+            case EGameVariableType.Bool:
+                if (GameManager.Instance.GetGameStoryVariable<bool>(ExpectedVariableKey) != bool.Parse(ExpectedVariableValue))
+                {
+                    gameObject.SetActive(false);
+                }
+                break;
+            case EGameVariableType.Int:
+                if (GameManager.Instance.GetGameStoryVariable<int>(ExpectedVariableKey) != int.Parse(ExpectedVariableValue))
+                {
+                    gameObject.SetActive(false);
+                }
+                break;
+            case EGameVariableType.Float:
+                if (GameManager.Instance.GetGameStoryVariable<float>(ExpectedVariableKey) != float.Parse(ExpectedVariableValue))
+                {
+                    gameObject.SetActive(false);
+                }
+                break;
+            case EGameVariableType.String:
+                if (GameManager.Instance.GetGameStoryVariable<string>(ExpectedVariableKey) != ExpectedVariableValue)
+                {
+                    gameObject.SetActive(false);
+                }
+                break;
         }
     }
 

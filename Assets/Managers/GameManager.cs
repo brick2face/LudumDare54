@@ -57,6 +57,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Dictionary<string, object> m_gameStoryVariables = new Dictionary<string, object>();
 
+    //TODO: Fire an event when a game story variable is set, so that other scripts can react to it.
+
     /// <summary>
     /// Adds or updates a game story variable to the dictionary.
     /// If the key does not exist, it will be added.
@@ -97,7 +99,16 @@ public class GameManager : MonoBehaviour
     /// <returns>The object of a given type.</returns>
     public T GetGameStoryVariable<T>(string key)
     {
-        return (T)m_gameStoryVariables[key];
+        Debug.Log("Checking with key: " + key);
+        if (!m_gameStoryVariables.ContainsKey(key))
+        {
+            return default(T);
+        }
+        else
+        {
+            object found = (T)m_gameStoryVariables[key];
+            return (T)m_gameStoryVariables[key];
+        }
     }
     #endregion
 

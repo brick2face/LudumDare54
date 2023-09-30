@@ -293,6 +293,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0093fe010833c44bab87ce9c7e4c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RequiresVariableToDisplay: 1
+  ExpectedVariableKey: bHasCompletedPuzzle
+  ExpectedVariableType: 0
+  ExpectedVariableValue: true
   ShouldSetGameStoryVariableOnInteract: 0
   GameStoryVariableKey: Test
   GameStoryVariableType: 0
