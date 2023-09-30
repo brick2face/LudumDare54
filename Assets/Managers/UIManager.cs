@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     public GameObject m_FadePanel;
 
-    // OtherUIPanel
+    // A UI Panel that allows us to display a UI panel from another scene.
     private GameObject m_IncomingPanel;
 
     #region HANDLE EXTERNAL PANELS
