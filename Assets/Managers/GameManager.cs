@@ -127,6 +127,13 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetString(kvp.Key, kvp.Value.ToString());
         }
+
+        // Saving the inventory is a bit more complicated, because we have a dictionary of InventoryItem -> int
+        foreach (KeyValuePair<InventoryItem, int> kvp in InventoryManager.Instance.InventoryItems)
+        {
+            PlayerPrefs.SetInt(kvp.Key.ItemName, kvp.Value);
+        }
+
         // Save which scene we are currently in
         PlayerPrefs.SetString("CurrentScene", m_CurrentSceneName);
     }
@@ -152,6 +159,9 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+
+        // TODO: Load inventory. I am thinking of custom serialisation (e.g. JSON, but it is open to hacking... on the other hand who cares?)
+
         // Load the save game scene
         LoadScene(PlayerPrefs.GetString("CurrentScene"));
     }
@@ -159,15 +169,28 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region GAME SCENE MANAGEMENT
+
+    private bool m_IsFading = false;
     /// <summary>
     /// Loads the scene with the given name.
     /// </summary>
     /// <param name="sceneName">SceneName</param>
     public void LoadScene(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
-        m_CurrentSceneName = sceneName;
-        SaveGame();                         // Save the game on a scene change.
+        UIManager.Instance.FadeToBlack(2.0f);
+        m_IsFading = true;
+
+        // Wait for the fade to finish
+        UIManager.Instance.OnFadeFinished.AddListener((_fade) =>
+        {
+            if (m_IsFading)
+            {
+                SceneManager.LoadScene(sceneName);
+                m_CurrentSceneName = sceneName;
+                SaveGame();                         // Save the game on a scene change.
+                m_IsFading = false;
+            }
+        });
     }
     #endregion
 
