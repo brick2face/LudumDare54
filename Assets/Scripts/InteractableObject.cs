@@ -88,8 +88,9 @@ public class InteractableObject : MonoBehaviour
             // Default the object to not be displayed
             gameObject.SetActive(false);
             CheckDisplay();
+            // Performance: We only need to listen for changes if we require a variable to display
+            GameManager.Instance.OnGameStoryVariableChanged.AddListener(OnGameStoryVariableChanged);
         }
-        GameManager.Instance.OnGameStoryVariableChanged.AddListener(OnGameStoryVariableChanged);
     }
 
     void OnGameStoryVariableChanged(string key, object value)
