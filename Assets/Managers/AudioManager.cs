@@ -8,17 +8,22 @@ public class AudioManager : MonoBehaviour
     public float BGMVolume = 0.8f;
     public float AmbientVolume = 0.8f;
 
-    private AudioSource m_bgmSource;
+    private AudioSource m_bgmSource1;
     private AudioSource m_bgAmbienceSource;
+    private AudioSource m_bgmSource2;
+
 
     void Start()
     {
         // Create the audio sources
-        m_bgmSource = gameObject.AddComponent<AudioSource>();
+        m_bgmSource1 = gameObject.AddComponent<AudioSource>();
+        m_bgmSource2 = gameObject.AddComponent<AudioSource>();
         m_bgAmbienceSource = gameObject.AddComponent<AudioSource>();
+        m_bgmSource2.playOnAwake = false;
 
         // Set the volume
-        m_bgmSource.volume = BGMVolume;
+        m_bgmSource1.volume = BGMVolume;
+        m_bgmSource2.volume = BGMVolume;
         m_bgAmbienceSource.volume = AmbientVolume;
     }
 
@@ -80,10 +85,29 @@ public class AudioManager : MonoBehaviour
     #region SCENE AUDIO
     public void SetBackgroundMusic(AudioClip clip)
     {
-        m_bgmSource.clip = clip;
-        m_bgmSource.Play();
+        m_bgmSource1.clip = clip;
+        m_bgmSource2.clip = clip;
+        m_bgmSource1.Play();
+        StartCoroutine(LoopTracks(clip.length));
     }
 
+    private IEnumerator LoopTracks(float clipLength)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(clipLength - 10.0f);
+
+            m_bgmSource2.Play();
+            yield return new WaitForSeconds(10.0f);
+
+            m_bgmSource2.Stop();
+
+            m_bgmSource1.Play();
+            yield return new WaitForSeconds(clipLength - 10.0f);
+
+            m_bgmSource1.Stop();
+        }
+    }
     public void SetBackgroundAmbience(AudioClip clip)
     {
         m_bgAmbienceSource.clip = clip;
