@@ -6,7 +6,7 @@ using UnityEngine.UI;
 /// <summary>
 /// This event is fired when the fade is finished. Bool is true if fading to black, false if fading from black.
 /// </summary>
-public class FadeFinishedEvent : UnityEngine.Events.UnityEvent<bool> { }
+public class FadeFinishedEvent : UnityEngine.Events.UnityEvent { }
 
 public class UIManager : MonoBehaviour
 {
@@ -112,9 +112,7 @@ public class UIManager : MonoBehaviour
         // Wait another second for the fade to finish / decent UX.
         yield return new WaitForSeconds(1.0f);
 
-        // if (!isFadeToBlack) m_FadePanel.SetActive(false);
-
-        OnFadeFinished.Invoke(isFadeToBlack);
+        if (isFadeToBlack) OnFadeFinished.Invoke();
     }
 
 }
