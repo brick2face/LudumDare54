@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Brig/Brig_2_Testing.unity
     guid: 985b822fc34d6ed47a5d799db9cafcf7
+  - enabled: 1
+    path: Assets/Scenes/Engine-Room/Engine-Room.unity
+    guid: dd15008281ae649ff9432c400fb97853
   m_configObjects: {}

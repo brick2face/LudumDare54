@@ -451,6 +451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonPrefab: {fileID: 7100563009115058946, guid: 0255a2579b3444ef6994bffb59767c48, type: 3}
+  _audioClips:
+  - {fileID: 8300000, guid: d5fa555c8b15647c2a7a8c861dfaccdb, type: 3}
+  - {fileID: 8300000, guid: 5e3dd99146dab40cfa3ee1900a378d12, type: 3}
 --- !u!114 &1344856489
 MonoBehaviour:
   m_ObjectHideFlags: 0
