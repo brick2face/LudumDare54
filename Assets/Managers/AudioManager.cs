@@ -6,6 +6,7 @@ public class AudioManager : MonoBehaviour
 {
     public float SFXVolume = 0.7f;
     public float BGMVolume = 0.8f;
+    public float AmbientVolume = 0.8f;
 
     private AudioSource m_bgmSource;
     private AudioSource m_bgAmbienceSource;
@@ -18,7 +19,7 @@ public class AudioManager : MonoBehaviour
 
         // Set the volume
         m_bgmSource.volume = BGMVolume;
-        m_bgAmbienceSource.volume = BGMVolume;
+        m_bgAmbienceSource.volume = AmbientVolume;
     }
 
     #region SINGLETON PATTERN 
@@ -72,7 +73,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="clip">The audio clip to play.</param>
     public void PlaySFX(AudioClip clip)
     {
-        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, SFXVolume);
     }
     #endregion
 
