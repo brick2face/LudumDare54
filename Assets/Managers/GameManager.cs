@@ -158,28 +158,6 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    #region GAME AUDIO
-    /// <summary>
-    /// Plays the given audio clip.
-    /// </summary>
-    /// <param name="clip">The audio clip to play.</param>
-    public void PlaySFX(AudioClip clip)
-    {
-        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position);
-    }
-
-    /// <summary>
-    /// Plays the given audio clip as background music.
-    /// </summary>
-    /// <param name="clip">The audio clip to play.</param>
-    public void PlayBGM(AudioClip clip)
-    {
-        AudioSource bgmSource = Camera.main.GetComponent<AudioSource>();
-        bgmSource.clip = clip;
-        bgmSource.Play();
-    }
-    #endregion
-
     #region GAME SCENE MANAGEMENT
     /// <summary>
     /// Loads the scene with the given name.

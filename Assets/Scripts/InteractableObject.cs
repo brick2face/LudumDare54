@@ -70,7 +70,7 @@ public class InteractableObject : MonoBehaviour
         // Play a sound effect if we should
         if (ShouldPlaySFXOnInteract)
         {
-            GameManager.Instance.PlaySFX(SFXClip);
+            AudioManager.Instance.PlaySFX(SFXClip);
         }
 
         // Finally, destroy ourselves if we should
@@ -144,7 +144,7 @@ public class InteractableObject : MonoBehaviour
         // Play a sound effect if we should when hovered over
         if (ShouldPlaySFXOnHover)
         {
-            GameManager.Instance.PlaySFX(HoverSFXClip);
+            AudioManager.Instance.PlaySFX(HoverSFXClip);
         }
     }
 
