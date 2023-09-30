@@ -21,6 +21,16 @@ public class InteractableObject : MonoBehaviour
     // Whether or not this object should destroy itself when interacted with
     public bool ShouldDestroyOnInteract = false;
 
+    [Header("Inventory On Interact")]
+    // Whether or not this object should add an inventory item when interacted with
+    public bool ShouldAddInventoryItemOnInteract = false;
+    public InventoryItem InventoryItemToAdd = null;      // The inventory item to add
+    public int InventoryItemQuantity = 1;               // The quantity of the inventory item to add
+
+    public bool ShouldConsumeInventoryItemOnInteract = false;
+    public InventoryItem InventoryItemToConsume = null;  // The inventory item to consume
+    public int InventoryItemConsumeQuantity = 1;        // The quantity of the inventory item to consume
+
     [Header("Scene Load On Interact")]
     // Whether or not this object should load a scene when interacted with
     public bool ShouldLoadSceneOnInteract = false;
@@ -71,6 +81,30 @@ public class InteractableObject : MonoBehaviour
         if (ShouldPlaySFXOnInteract)
         {
             AudioManager.Instance.PlaySFX(SFXClip);
+        }
+
+        // Add an inventory item if we should
+        if (ShouldAddInventoryItemOnInteract)
+        {
+            for (int i = 0; i < InventoryItemQuantity; i++)
+            {
+                InventoryManager.Instance.GrantInventoryItem(InventoryItemToAdd);
+            }
+        }
+
+        // Consume an inventory item if we should
+        if (ShouldConsumeInventoryItemOnInteract)
+        {
+            for (int i = 0; i < InventoryItemConsumeQuantity; i++)
+            {
+                if (InventoryManager.Instance.RemoveInventoryItem(InventoryItemToConsume))
+                {
+                    //TODO: What should we do if we can't consume the item?
+                    //TODO: We should be able to chain Actions together, so that if successful, it may trigger another action.
+                    Debug.Log("Consumed an item: " + InventoryItemToConsume.ItemName);
+
+                }
+            }
         }
 
         // Finally, destroy ourselves if we should

@@ -241,6 +241,12 @@ MonoBehaviour:
   GameStoryVariableType: 0
   GameStoryVariableValue: true
   ShouldDestroyOnInteract: 0
+  ShouldAddInventoryItemOnInteract: 1
+  InventoryItemToAdd: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
+  InventoryItemQuantity: 3
+  ShouldConsumeInventoryItemOnInteract: 0
+  InventoryItemToConsume: {fileID: 0}
+  InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 0
   SceneName: 
   ShouldPlaySFXOnInteract: 0
@@ -575,7 +581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca0093fe010833c44bab87ce9c7e4c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RequiresVariableToDisplay: 1
+  RequiresVariableToDisplay: 0
   ExpectedVariableKey: bHasCompletedPuzzle
   ExpectedVariableType: 0
   ExpectedVariableValue: true
@@ -584,6 +590,12 @@ MonoBehaviour:
   GameStoryVariableType: 0
   GameStoryVariableValue: 
   ShouldDestroyOnInteract: 0
+  ShouldAddInventoryItemOnInteract: 0
+  InventoryItemToAdd: {fileID: 0}
+  InventoryItemQuantity: 1
+  ShouldConsumeInventoryItemOnInteract: 1
+  InventoryItemToConsume: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
+  InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 0
   SceneName: 
   ShouldPlaySFXOnInteract: 1

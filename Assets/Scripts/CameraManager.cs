@@ -8,7 +8,10 @@ public class CameraManager : MonoBehaviour
     public float CameraMoveSpeed = 1.0f;
     public float LeftExtent = 0.0f;
     public float RightExtent = 0.0f;
-    public float BufferOffset = 3.0f;
+    public float UpExtent = 0.0f;
+    public float DownExtent = 0.0f;
+    public float BufferOffsetX = 3.0f;
+    public float BufferOffsetY = 3.0f;
 
     private float m_CenterOffset;
 
@@ -20,11 +23,17 @@ public class CameraManager : MonoBehaviour
         // Set the right extent to the right edge of the sprite background which is the parent
         RightExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.max.x;
 
-        // Add a 1 unit buffer to the left and right extents so the camera doesn't go off screen
-        LeftExtent += BufferOffset;
-        RightExtent -= BufferOffset;
+        // Set the up extent to the top edge of the sprite background which is the parent
+        UpExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.min.y;
 
-        // TODO IDEALLY CALCULATE THIS BASED ON THE SIZE OF THE CAMERA and the size of the background, for now this works...
+        // Set the down extent to the bottom edge of the sprite background which is the parent
+        DownExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.max.y;
+
+        // Add a 1 unit buffer to the left and right extents so the camera doesn't go off screen
+        LeftExtent += BufferOffsetX;
+        RightExtent -= BufferOffsetX;
+        UpExtent += BufferOffsetY;
+        DownExtent -= BufferOffsetY;
     }
 
     // Update is called once per frame
@@ -52,6 +61,30 @@ public class CameraManager : MonoBehaviour
             if (transform.position.x < LeftExtent)
             {
                 transform.position = new Vector3(LeftExtent, transform.position.y, transform.position.z);
+            }
+        }
+
+        // If mouse is in the top 10% of the screen, move camera up.
+        if (Input.mousePosition.y > Screen.height * 0.9f)
+        {
+            transform.position += Vector3.up * CameraMoveSpeed * Time.deltaTime;
+
+            // If the background is beyond the top edge of the screen, move it back to the top edge of the screen.
+            if (transform.position.y > UpExtent)
+            {
+                transform.position = new Vector3(transform.position.x, UpExtent, transform.position.z);
+            }
+        }
+
+        // If mouse is in the bottom 10% of the screen, move camera down.
+        if (Input.mousePosition.y < Screen.height * 0.1f)
+        {
+            transform.position += Vector3.down * CameraMoveSpeed * Time.deltaTime;
+
+            // If the background is beyond the bottom edge of the screen, move it back to the bottom edge of the screen.
+            if (transform.position.y < DownExtent)
+            {
+                transform.position = new Vector3(transform.position.x, DownExtent, transform.position.z);
             }
         }
     }
