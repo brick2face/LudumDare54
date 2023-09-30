@@ -105,8 +105,12 @@ public class InventoryManager : MonoBehaviour
                 {
                     InventoryItems.Remove(item);
                 }
+
+                // Fire off an event when an item is removed. This can be used for UI updates down the line.
                 OnInventoryItemRemoved.Invoke(item, (count - 1));
                 Debug.Log("Removed an item from the player's inventory: " + item.ItemName + " The player now has " + (count - 1) + " of this item.");
+                // Save the game after removing an item
+                GameManager.Instance.SaveGame();
                 return true;
             }
         }
@@ -115,7 +119,5 @@ public class InventoryManager : MonoBehaviour
             Debug.LogError("Can't remove an item the player doesn't have!");
             return false;
         }
-        // Save the game after removing an item
-        GameManager.Instance.SaveGame();
     }
 }
