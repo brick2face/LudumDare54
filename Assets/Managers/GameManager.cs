@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-// using SubGame;
+
+public class GameStoryVariableChangeEvent : UnityEngine.Events.UnityEvent<string, object> { }
 
 public class GameManager : MonoBehaviour
 {
 
     public string InitialSceneName;
+    private string m_CurrentSceneName; //Used for saving / loading...
 
     #region SINGLETON PATTERN 
     private static int m_referenceCount = 0;
@@ -56,8 +58,8 @@ public class GameManager : MonoBehaviour
     #region GAME STORY VARIABLES
     [SerializeField]
     private Dictionary<string, object> m_gameStoryVariables = new Dictionary<string, object>();
+    public GameStoryVariableChangeEvent OnGameStoryVariableChanged = new GameStoryVariableChangeEvent();
 
-    //TODO: Fire an event when a game story variable is set, so that other scripts can react to it.
 
     /// <summary>
     /// Adds or updates a game story variable to the dictionary.
@@ -77,6 +79,8 @@ public class GameManager : MonoBehaviour
             m_gameStoryVariables.Add(key, value);
         }
         Debug.Log("SetGameStoryVariable: " + key + " = " + value.ToString() + " Of type: " + value.GetType().ToString());
+        //Fire an event when a game story variable is set, so that other scripts can react to it.
+        OnGameStoryVariableChanged.Invoke(key, value);
     }
 
     /// <summary>
@@ -118,10 +122,13 @@ public class GameManager : MonoBehaviour
     /// </summary>
     public void SaveGame()
     {
+        // Save all of the game story variables to PlayerPrefs
         foreach (KeyValuePair<string, object> kvp in m_gameStoryVariables)
         {
             PlayerPrefs.SetString(kvp.Key, kvp.Value.ToString());
         }
+        // Save which scene we are currently in
+        PlayerPrefs.SetString("CurrentScene", m_CurrentSceneName);
     }
 
     /// <summary>
@@ -145,6 +152,8 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+        // Load the save game scene
+        LoadScene(PlayerPrefs.GetString("CurrentScene"));
     }
 
     #endregion
@@ -179,6 +188,8 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        m_CurrentSceneName = sceneName;
+        SaveGame();                         // Save the game on a scene change.
     }
     #endregion
 
