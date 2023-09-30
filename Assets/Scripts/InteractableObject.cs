@@ -46,6 +46,15 @@ public class InteractableObject : MonoBehaviour
     public bool ShouldPlaySFXOnHover = false;          // Whether or not this object should play a sound effect when hovered over
     public AudioClip HoverSFXClip = null;               // The audio clip to play
 
+    [Header("UI Instantiate On Interact")]
+    public bool ShouldInstantiatePrefabUIOnInteract = false;  // Whether or not this object should instantiate a UI object when interacted with
+    public GameObject CanvasPrefab = null;              // The UI object to instantiate
+
+    [Header("UI Visibility Only On Interact")]
+    public bool ShouldSetUIVisibleOnly = false;
+    public GameObject Panel = null;
+
+
     /// <summary>
     /// This is the function that is called when an interactable object is interacted with.
     /// </summary>
@@ -106,6 +115,17 @@ public class InteractableObject : MonoBehaviour
         {
             Debug.Log("Telling the game manager to load the scene: " + SceneName);
             GameManager.Instance.LoadScene(SceneName);
+        }
+
+        // Else let's load a UI object if we should
+        if (ShouldInstantiatePrefabUIOnInteract)
+        {
+            GameObject canvas = Instantiate(CanvasPrefab);
+        }
+
+        if (ShouldSetUIVisibleOnly)
+        {
+            Panel.SetActive(true);
         }
 
         // Finally, destroy ourselves if we should
