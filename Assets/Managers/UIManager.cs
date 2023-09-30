@@ -142,6 +142,14 @@ public class UIManager : MonoBehaviour
     }
 
     /// <summary>
+    /// This function will set the fade panel to be inactive.
+    /// </summary>
+    public void InactivateFadePanel()
+    {
+        m_FadePanel.SetActive(false);
+    }
+
+    /// <summary>
     /// This function is called when the fade is finished.
     /// </summary>
     /// <param name="duration">How long the fade took.</param>
@@ -163,10 +171,10 @@ public class UIManager : MonoBehaviour
             yield return null;
         }
 
-        // Wait another second for the fade to finish / decent UX.
-        yield return new WaitForSeconds(1.0f);
-
         if (isFadeToBlack) OnFadeFinished.Invoke();
+        // Wait another couple of second for the fade to finish / decent UX.
+        yield return new WaitForSeconds(2.0f);
+        m_FadePanel.SetActive(false);
     }
 
     #endregion
