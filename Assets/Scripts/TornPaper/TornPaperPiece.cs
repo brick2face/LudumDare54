@@ -32,11 +32,6 @@ namespace LemApperson.TornPaper
             temp.a = 1.0f;
             _image.color = temp;
             _image.raycastTarget = true;
-            if (!_reachedTornPaperSlot)
-            {
-                transform.position = _initialPosition;
-                _isWiggling = true;
-            }
         }
 
         public void OnBeginDrag(PointerEventData eventData)
