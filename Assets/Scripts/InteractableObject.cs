@@ -71,12 +71,6 @@ public class InteractableObject : MonoBehaviour
             }
         }
 
-        // Load a scene if we should
-        if (ShouldLoadSceneOnInteract)
-        {
-            GameManager.Instance.LoadScene(SceneName);
-        }
-
         // Play a sound effect if we should
         if (ShouldPlaySFXOnInteract)
         {
@@ -105,6 +99,13 @@ public class InteractableObject : MonoBehaviour
 
                 }
             }
+        }
+
+        // Load a scene if we should
+        if (ShouldLoadSceneOnInteract)
+        {
+            Debug.Log("Telling the game manager to load the scene: " + SceneName);
+            GameManager.Instance.LoadScene(SceneName);
         }
 
         // Finally, destroy ourselves if we should
