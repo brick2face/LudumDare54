@@ -22,20 +22,36 @@ namespace LemApperson.TornPaper
             _game = GetComponentInParent<BattleShipGame>();
         }
 
+        /// <summary>
+        /// If Correct, top button graphic is turned off.
+        /// If Incorrect, both top and middle buttons are turned off.
+        /// </summary>
         public void ButtonClicked() {
             if (!_buttonState) {
                 _buttonState = true;
                 if (_game.ShipHitted(_buttonID)) {
                     _button3.SetActive(false);
-                }  else {
+                } else {
                     _button3.SetActive(false);
                     _button2.SetActive(false);
                 }
             }
         }
 
+        /// <summary>
+        /// When a button has been played, its state becomes true.
+        /// </summary>
         public void SetButtonState(bool ButtonState) {
             _buttonState = ButtonState;
+        }
+
+        /// <summary>
+        /// Bring button back to its initial state.
+        /// </summary>
+        public void Reset() {
+            _button3.SetActive(true);
+            _button2.SetActive(true);
+            _buttonState = false;
         }
     }
 }

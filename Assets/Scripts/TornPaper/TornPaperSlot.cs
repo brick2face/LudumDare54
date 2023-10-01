@@ -7,6 +7,11 @@ namespace LemApperson.TornPaper
 {
     public class TornPaperSlot : MonoBehaviour,  IDropHandler
     {
+        //
+        //  No longer used. This feature snapped paper pieces
+        //  to specific locations on the screen.
+        // 
+        
         // Use USPS TornPaper Abbreviations
         [SerializeField] public string _TornPaperName;
         private Vector3 _initialPosition;
