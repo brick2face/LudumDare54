@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/GameStartup.unity
     guid: 5ff2c3f8b062aee4b80b84cef31296e2
   - enabled: 1
+    path: Assets/Scenes/NovelScenes/Novel_Scene_Pg1.unity
+    guid: dbd1786c06320ca44bfc499964ee1e05
+  - enabled: 1
+    path: Assets/Scenes/NovelScenes/Novel_Scene_Pg2.unity
+    guid: 63473d893bdc5b8499c0aa1bb645be20
+  - enabled: 1
+    path: Assets/Scenes/NovelScenes/Novel_Scene_Pg3.unity
+    guid: 97a57f407f4eba44dabc475d2fa1f1e2
+  - enabled: 1
     path: Assets/Scenes/Brig/Brig.unity
     guid: 33d174a76f266ce408bfedd1ae8adf04
   - enabled: 1
