@@ -17,6 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NovelScenes/Novel_Scene_Pg3.unity
     guid: 97a57f407f4eba44dabc475d2fa1f1e2
+    path: Assets/Scenes/Menus/MainMenu.unity
+    guid: 8690fdd6dd830dc46b0ade69efdf7522
   - enabled: 1
     path: Assets/Scenes/Brig/Brig.unity
     guid: 33d174a76f266ce408bfedd1ae8adf04

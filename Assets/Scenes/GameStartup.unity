@@ -167,7 +167,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564298fdddac2b748b454c9e1149624e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InitialSceneName: Novel_Scene_Pg1
+  InitialSceneName: MainMenu
+  NewGameScene: Brig_2_Testing
 --- !u!1 &943605011
 GameObject:
   m_ObjectHideFlags: 0
