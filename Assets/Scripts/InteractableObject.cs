@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractableObject : MonoBehaviour
 {
@@ -114,7 +115,7 @@ public class InteractableObject : MonoBehaviour
         if (ShouldLoadSceneOnInteract)
         {
             Debug.Log("Telling the game manager to load the scene: " + SceneName);
-            GameManager.Instance.LoadScene(SceneName);
+            SceneManager.LoadScene(SceneName);
         }
 
         // Else let's load a UI object if we should

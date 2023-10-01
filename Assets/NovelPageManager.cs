@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NovelPageManager : MonoBehaviour
@@ -15,7 +16,7 @@ public class NovelPageManager : MonoBehaviour
     {
         m_NextButton.onClick.AddListener(() =>
         {
-            GameManager.Instance.LoadScene(DestinationSceneName);
+            SceneManager.LoadScene(DestinationSceneName);
         });
     }
 }
