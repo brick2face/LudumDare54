@@ -29,11 +29,18 @@ namespace LemApperson.TornPaper
         public void ButtonClicked() {
             if (!_buttonState) {
                 _buttonState = true;
-                if (_game.ShipHitted(_buttonID)) {
-                    _button3.SetActive(false);
-                } else {
-                    _button3.SetActive(false);
-                    _button2.SetActive(false);
+                int Status = _game.ShipHitted(_buttonID);
+                switch (Status)
+                {
+                    case 0:
+                        _button3.SetActive(false);
+                        _button2.SetActive(false);
+                        break;
+                    case 1:
+                        _button3.SetActive(false);
+                        break;
+                    case 2:
+                        break;
                 }
             }
         }

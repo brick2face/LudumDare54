@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace LemApperson.TornPaper
 {
@@ -10,8 +12,8 @@ namespace LemApperson.TornPaper
         [SerializeField] private AudioClip[] _audioClips;
         private BattleShipButton[] _buttons;
         private int[] _shipPositions;
-        private int _correctAnswers;
-        private bool _gameWon;
+        public int _correctAnswers, _attempts;
+        private bool _gameOver;
 
         /// <summary>
         /// Populate the grid with 36 buttons. Each is given a unique name,
@@ -53,31 +55,39 @@ namespace LemApperson.TornPaper
         }
 
 
-        public bool ShipHitted(int ButtonId) {
-            if (!_gameWon) {
+        public int ShipHitted(int ButtonId) {
+            _attempts++; 
+            if (!_gameOver) {
                 return CheckIfElementsMatch(ButtonId);
             }
-            return false;
+            return 2;
         }
 
         /// <summary>
         /// the button id is compared to the game data
         /// </summary>
-        bool CheckIfElementsMatch(int ButtonID) {
+        int CheckIfElementsMatch(int ButtonID) {    
+            if (_attempts == 18) {
+                _gameOver = true;
+                StartCoroutine(ResetBoard());
+            }
             for (int i = 0; i < _shipPositions.Length; i++) {
                 if (_shipPositions[i] == ButtonID) {
                     _correctAnswers++;
                     if (_correctAnswers == 10) {
                         GameWon();
-                    } else if (_correctAnswers == 36) {
-                        // StartCoroutine(ResetBoard());
+                    }     
+                    if (_attempts == 18)
+                    {
+                        _gameOver = true;
+                        StartCoroutine(ResetBoard());
                     }
                     AudioManager.Instance.PlaySFX(_audioClips[0]);
-                    return true;
+                    return 1;  // true
                 }
             }
             AudioManager.Instance.PlaySFX(_audioClips[1]);
-            return false;
+            return 0;  // false
         }
 
         /// <summary>
@@ -85,13 +95,11 @@ namespace LemApperson.TornPaper
         /// The buttons are set to true to make them inactive.
         /// </summary>
         private void GameWon() {
-            // GameManager.Instance.GameWon();
             AudioManager.Instance.PlaySFX(_audioClips[2]);
-           _gameWon = true;
+           _gameOver = true;
            for (int i = 0; i < _buttons.Length; i++) {
                _buttons[i].SetButtonState(true);
            }
-
            GameManager.Instance.SetGameStoryVariable("BattleShipPuzzle", true);
            // StartCoroutine(ResetBoard());
         }
@@ -104,7 +112,8 @@ namespace LemApperson.TornPaper
             }
             PickBoardData();
             _correctAnswers = 0;
-            _gameWon = false;
+            _attempts = 0;
+            _gameOver = false;
         }
     }
 }
