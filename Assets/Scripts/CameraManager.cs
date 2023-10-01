@@ -10,13 +10,16 @@ public class CameraManager : MonoBehaviour
     public float RightExtent = 0.0f;
     public float UpExtent = 0.0f;
     public float DownExtent = 0.0f;
-    public float BufferOffsetX = 3.0f;
-    public float BufferOffsetY = 3.0f;
+    private Camera camera;
+
 
     private float m_CenterOffset;
 
     void Start()
     {
+        camera = FindObjectOfType<Camera>();
+        float cameraVerticalOffset = camera.orthographicSize;
+        float cameraHorizontalOffset = camera.aspect * cameraVerticalOffset;
         // Set the left extent to the left edge of the sprite background which is the parent
         LeftExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.min.x;
 
@@ -24,16 +27,16 @@ public class CameraManager : MonoBehaviour
         RightExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.max.x;
 
         // Set the up extent to the top edge of the sprite background which is the parent
-        UpExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.min.y;
+        UpExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.max.y;
 
         // Set the down extent to the bottom edge of the sprite background which is the parent
-        DownExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.max.y;
+        DownExtent = transform.parent.GetComponent<SpriteRenderer>().bounds.min.y;
 
-        // Add a 1 unit buffer to the left and right extents so the camera doesn't go off screen
-        LeftExtent += BufferOffsetX;
-        RightExtent -= BufferOffsetX;
-        UpExtent += BufferOffsetY;
-        DownExtent -= BufferOffsetY;
+        // Add a buffer proportional to the camera size so the camera doesn't go off screen
+        LeftExtent += cameraHorizontalOffset;
+        RightExtent -= cameraHorizontalOffset;
+        UpExtent -= cameraVerticalOffset;
+        DownExtent += cameraVerticalOffset;
     }
 
     // Update is called once per frame
