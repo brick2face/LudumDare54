@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
 
     public string InitialSceneName;
+    public string NewGameScene;
     private string m_CurrentSceneName; //Used for saving / loading...
 
     #region SINGLETON PATTERN 
@@ -136,6 +137,10 @@ public class GameManager : MonoBehaviour
 
         // Save which scene we are currently in
         PlayerPrefs.SetString("CurrentScene", m_CurrentSceneName);
+        PlayerPrefs.SetString("HasSavedGame", "true");
+
+        Debug.Log("Saved! Current scene: " + m_CurrentSceneName);
+        Debug.Log(PlayerPrefs.GetString("CurrentScene"));
     }
 
     /// <summary>
@@ -164,6 +169,15 @@ public class GameManager : MonoBehaviour
 
         // Load the save game scene
         LoadScene(PlayerPrefs.GetString("CurrentScene"));
+    }
+
+    /// <summary>
+    /// Returns true if there is a saved game.
+    /// </summary>
+    /// <returns>True if the player has a saved game, or false if not.</returns>
+    public bool HasSavedGame()
+    {
+        return PlayerPrefs.HasKey("HasSavedGame");
     }
 
     #endregion
@@ -196,14 +210,39 @@ public class GameManager : MonoBehaviour
         {
             if (m_IsFading)
             {
-                SaveGame();                         // Save the game on a scene change.
                 m_IsFading = false;                 // Finished the fade.
                 this.LoadScene();                   // Now that we have set the current scene name, we can load the scene.
             }
         });
+
+        // Save the game on a scene change ONLY if we are not going to the main menu or credits.
+        if (sceneName != "MainMenu" && sceneName != "Credits")
+        {
+            SaveGame();
+        }
+    }
+    #endregion
+
+    #region GAME STATE MANAGEMENT
+    /// <summary>
+    /// Starts a new game.
+    /// </summary>
+    public void StartNewGame()
+    {
+        LoadScene(NewGameScene);
     }
 
-
+    /// <summary>
+    /// Loads the saved game.
+    /// </summary>
+    public void LoadSavedGame()
+    {
+        if (HasSavedGame())
+        {
+            Debug.Log("Current saved scene: " + PlayerPrefs.GetString("CurrentScene"));
+            LoadScene(PlayerPrefs.GetString("CurrentScene"));
+        }
+    }
 
     #endregion
 
