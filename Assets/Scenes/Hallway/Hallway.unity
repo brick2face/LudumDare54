@@ -252,15 +252,19 @@ MonoBehaviour:
   ShouldAddInventoryItemOnInteract: 0
   InventoryItemToAdd: {fileID: 0}
   InventoryItemQuantity: 1
-  ShouldConsumeInventoryItemOnInteract: 1
+  ShouldConsumeInventoryItemOnInteract: 0
   InventoryItemToConsume: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
   SceneName: Brig
-  ShouldPlaySFXOnInteract: 1
+  ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
+  ShouldInstantiatePrefabUIOnInteract: 0
+  CanvasPrefab: {fileID: 0}
+  ShouldSetUIVisibleOnly: 0
+  Panel: {fileID: 0}
 --- !u!1001 &134036298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -390,15 +394,161 @@ MonoBehaviour:
   ShouldAddInventoryItemOnInteract: 0
   InventoryItemToAdd: {fileID: 0}
   InventoryItemQuantity: 1
-  ShouldConsumeInventoryItemOnInteract: 1
+  ShouldConsumeInventoryItemOnInteract: 0
   InventoryItemToConsume: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
   SceneName: Brig
-  ShouldPlaySFXOnInteract: 1
+  ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
+  ShouldInstantiatePrefabUIOnInteract: 0
+  CanvasPrefab: {fileID: 0}
+  ShouldSetUIVisibleOnly: 0
+  Panel: {fileID: 0}
+--- !u!1001 &218584731
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Name
+      value: Right Door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_FlipY
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8898624
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.40862027
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 218584733}
+  m_SourcePrefab: {fileID: 100100000, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+--- !u!1 &218584732 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+  m_PrefabInstance: {fileID: 218584731}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &218584733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218584732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca0093fe010833c44bab87ce9c7e4c6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RequiresVariableToDisplay: 0
+  ExpectedVariableKey: bHasCompletedPuzzle
+  ExpectedVariableType: 0
+  ExpectedVariableValue: true
+  ShouldSetGameStoryVariableOnInteract: 0
+  GameStoryVariableKey: 
+  GameStoryVariableType: 0
+  GameStoryVariableValue: 
+  ShouldDestroyOnInteract: 0
+  ShouldAddInventoryItemOnInteract: 0
+  InventoryItemToAdd: {fileID: 0}
+  InventoryItemQuantity: 1
+  ShouldConsumeInventoryItemOnInteract: 0
+  InventoryItemToConsume: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
+  InventoryItemConsumeQuantity: 1
+  ShouldLoadSceneOnInteract: 1
+  SceneName: Brig_2_Testing
+  ShouldPlaySFXOnInteract: 0
+  SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
+  ShouldPlaySFXOnHover: 0
+  HoverSFXClip: {fileID: 0}
+  ShouldInstantiatePrefabUIOnInteract: 0
+  CanvasPrefab: {fileID: 0}
+  ShouldSetUIVisibleOnly: 0
+  Panel: {fileID: 0}
 --- !u!1 &366633397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7150154372246772143, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
@@ -534,6 +684,10 @@ MonoBehaviour:
   SFXClip: {fileID: 0}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
+  ShouldInstantiatePrefabUIOnInteract: 0
+  CanvasPrefab: {fileID: 0}
+  ShouldSetUIVisibleOnly: 0
+  Panel: {fileID: 0}
 --- !u!1 &1197392483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4330323576086716, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
@@ -897,21 +1051,26 @@ MonoBehaviour:
   ShouldAddInventoryItemOnInteract: 0
   InventoryItemToAdd: {fileID: 0}
   InventoryItemQuantity: 1
-  ShouldConsumeInventoryItemOnInteract: 1
+  ShouldConsumeInventoryItemOnInteract: 0
   InventoryItemToConsume: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
-  SceneName: Brig
-  ShouldPlaySFXOnInteract: 1
+  SceneName: Engine
+  ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
+  ShouldInstantiatePrefabUIOnInteract: 0
+  CanvasPrefab: {fileID: 0}
+  ShouldSetUIVisibleOnly: 0
+  Panel: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 7353641564019834699}
   - {fileID: 134036298}
+  - {fileID: 218584731}
   - {fileID: 31524750}
   - {fileID: 794795817}
   - {fileID: 5473607737842802114}
