@@ -275,8 +275,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -513, y: -261}
-  m_SizeDelta: {x: 823.7566, y: 62.6267}
+  m_AnchoredPosition: {x: -159, y: -201}
+  m_SizeDelta: {x: 891.0633, y: 58.5475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &626353966
 MonoBehaviour:
@@ -298,7 +298,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text blah blah modify this however you'd like.
+  m_text: "Then, on my second evening since the wreck, my prayers were answered with
+    a surreal sight: a submarine surfaced before me. The hatch slowly opened, and
+    I was pulled from my lifeboat and onto the vessel by armed men. I was questioned
+    harshly by the captain, and then confined to private quarters. My saviors became
+    my captors.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -325,8 +329,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -361,7 +365,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -41.965042, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -411,7 +415,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2427.713, y: 2427.713}
+  m_SizeDelta: {x: 941.32, y: 941.3245}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142808623
 MonoBehaviour:
@@ -433,7 +437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c6b4bacad539d24d9bb104a3d15e452, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2236a7366da59946a5c0cd9e408ffa8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -487,7 +491,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -661,7 +665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750.4934, y: -285.95404}
+  m_AnchoredPosition: {x: 463, y: -221}
   m_SizeDelta: {x: 261.0133, y: 64.0919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2062031303
