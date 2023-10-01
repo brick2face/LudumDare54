@@ -26,6 +26,11 @@ namespace LemApperson.TornPaper
                 _button.GetComponent<BattleShipButton>().SetButtonID(i);
             }
             _buttons = GetComponentsInChildren<BattleShipButton>();
+            PickBoardData();
+        }
+
+        private void PickBoardData()
+        {
             int randomValue = Random.Range(1, 5); // Generates a random integer between 1 and 4 (inclusive)
             switch (randomValue)
             {
@@ -33,21 +38,21 @@ namespace LemApperson.TornPaper
                     _shipPositions= new int[] {7,8,9,10,24,25,26,22,28,34 };
                     break;
                 case 2:
-                    _shipPositions= new int[] {0,6,13,19,9,10,11,28,29,30 };
+                    _shipPositions= new int[] {0,6,12,18,9,10,11,27,28,29 };
                     break;
                 case 3:
-                    _shipPositions= new int[] {31,32,33,34,1,8,14,5,11,17 };
+                    _shipPositions= new int[] {31,32,33,34,1,7,13,5,11,17 };
                     break;
                 case 4:
-                    _shipPositions= new int[] {27,28,29,30,13,14,15,3,4,5 };
+                    _shipPositions= new int[] {26,27,28,29,13,14,15, 3,4,5 };
                     break;
                 default:
-                    _shipPositions= new int[] {0,6,13,19,9,10,11,28,29,30 };
+                    _shipPositions= new int[] {0,6,12,18,9,10,11,28,29,30 };
                     break;
             }
         }
 
-        
+
         public bool ShipHitted(int ButtonId) {
             if (!_gameWon) {
                 return CheckIfElementsMatch(ButtonId);
@@ -95,19 +100,22 @@ namespace LemApperson.TornPaper
             for (int i = 0; i < _buttons.Length; i++) {
                 _buttons[i].Reset();
             }
+            PickBoardData();
+            _correctAnswers = 0;
+            _gameWon = false;
         }
     }
 }
 
 //
-//  0       1       2       3       5       6
-//  6       8       9       10      11      12
-//  13      14      15      16      17      18
-//  19      20      21      22      23      24
-//  25      26      27      28      29      30
-//  31      32      33      34      35      36
+//  0       1       2       3       4       5
+//  6       7       8       9       10      11
+//  12      13      14      15      16      17
+//  18      19      20      21      22      23
+//  24      25      26      27      28      29
+//  30      31      32      33      34      35
 //
 
-//  Ship1  27,28,29,30
-//  Ship2  13.14.15
+//  Ship1  26, 27,28,29
+//  Ship2  13,14,15
 //  Ship3  3,4,5
