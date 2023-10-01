@@ -70,7 +70,7 @@ namespace LemApperson.TornPaper
                     if (_correctAnswers == 10) {
                         GameWon();
                     } else if (_correctAnswers == 36) {
-                        StartCoroutine(ResetBoard());
+                        // StartCoroutine(ResetBoard());
                     }
                     AudioManager.Instance.PlaySFX(_audioClips[0]);
                     return true;
@@ -91,7 +91,9 @@ namespace LemApperson.TornPaper
            for (int i = 0; i < _buttons.Length; i++) {
                _buttons[i].SetButtonState(true);
            }
-           StartCoroutine(ResetBoard());
+
+           GameManager.Instance.SetGameStoryVariable("BattleShipPuzzle", true);
+           // StartCoroutine(ResetBoard());
         }
 
         private IEnumerator ResetBoard()
