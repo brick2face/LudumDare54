@@ -275,8 +275,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -513, y: -261}
-  m_SizeDelta: {x: 823.7566, y: 62.6267}
+  m_AnchoredPosition: {x: -206, y: -131.66}
+  m_SizeDelta: {x: 823.7566, y: 263.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &626353966
 MonoBehaviour:
@@ -298,7 +298,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Text blah blah modify this however you'd like.
+  m_text: "It had been a nightmare\u2014a sudden tempest had ripped our vessel apart,
+    and I found myself alone, adrift in a small lifeboat. The violent waves battered
+    me, tossing me around like a ragdoll. With each cresting wave, I feared it might
+    be my last. The sun blazed overhead, its unrelenting rays scorching my skin.
+    I couldn't help but wonder if I would ever be saved.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -325,8 +329,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -361,7 +365,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -8.547791, y: 130.35303, z: -106.84686, w: -32.054016}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -410,8 +414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2427.713, y: 2427.713}
+  m_AnchoredPosition: {x: 0.000012398, y: -0.0000095367}
+  m_SizeDelta: {x: 920.5241, y: 920.5228}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1142808623
 MonoBehaviour:
@@ -433,7 +437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4c6b4bacad539d24d9bb104a3d15e452, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b36a8832244d2a747bce06c8ee528ad4, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -487,7 +491,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -661,7 +665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 750.4934, y: -285.95404}
+  m_AnchoredPosition: {x: 476, y: -225}
   m_SizeDelta: {x: 261.0133, y: 64.0919}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2062031303
