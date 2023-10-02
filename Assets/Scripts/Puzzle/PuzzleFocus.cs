@@ -31,7 +31,7 @@ public class PuzzleFocus : MonoBehaviour
 
     public void Win()
     {
-
+        Puzzle.GetComponent<InteractableObject>().ShouldSetGameStoryVariableOnInteract = true;
     }
     public void RestartPuzzle()
     {

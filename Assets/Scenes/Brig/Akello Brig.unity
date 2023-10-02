@@ -154,14 +154,14 @@ MonoBehaviour:
   GameStoryVariableType: 0
   GameStoryVariableValue: 
   ShouldDestroyOnInteract: 0
-  ShouldAddInventoryItemOnInteract: 1
+  ShouldAddInventoryItemOnInteract: 0
   InventoryItemToAdd: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
   InventoryItemQuantity: 1
   ShouldConsumeInventoryItemOnInteract: 0
   InventoryItemToConsume: {fileID: 0}
   InventoryItemConsumeQuantity: 1
-  ShouldLoadSceneOnInteract: 0
-  SceneName: GameStartUp
+  ShouldLoadSceneOnInteract: 1
+  SceneName: BallTestScene
   ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 0}
   ShouldPlaySFXOnHover: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429368663}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -652,7 +652,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -734,11 +734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.47
+      value: -2.64
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.26
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.z
