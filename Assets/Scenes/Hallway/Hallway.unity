@@ -500,7 +500,7 @@ MonoBehaviour:
   InventoryItemToConsume: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
-  SceneName: Brig
+  SceneName: BrigOld
   ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
   ShouldPlaySFXOnHover: 0

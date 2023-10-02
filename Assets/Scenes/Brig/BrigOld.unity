@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interactable 2D Object (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -248,6 +252,10 @@ PrefabInstance:
     - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Name
       value: Interactable 2D Object (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Enabled
@@ -372,8 +380,12 @@ PrefabInstance:
       value: Interactable 2D Object
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 263ad3f0a5913c54b916ecf5c9272caa, type: 3}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Enabled
@@ -381,15 +393,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Size.x
+      value: 3.3999615
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Size.y
+      value: 5.079174
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.07058638
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0195117
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.12
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5981224
+      value: 0.4191779
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.826034
+      value: 1.1304137
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.z
@@ -401,7 +437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -409,7 +445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071069
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -421,7 +457,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -433,7 +469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -498,6 +534,10 @@ PrefabInstance:
     - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Name
       value: Interactable 2D Object (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Enabled
@@ -611,6 +651,10 @@ PrefabInstance:
     - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Name
       value: Interactable 2D Object (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Enabled
@@ -729,6 +773,10 @@ PrefabInstance:
     - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Name
       value: Interactable 2D Object (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Enabled
@@ -850,6 +898,10 @@ PrefabInstance:
     - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Name
       value: Interactable 2D Object (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Enabled
@@ -1029,6 +1081,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5880040007562221126, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4c6b4bacad539d24d9bb104a3d15e452, type: 3}
     - target: {fileID: 7150154372246772143, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
       propertyPath: m_Name
       value: Base Scene - Background
