@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class KeyPad : MonoBehaviour
 {
@@ -52,9 +53,13 @@ public class KeyPad : MonoBehaviour
     {
         PlayerInput.text = null;
     }
+    public void exitkeypad()
+    {
+        SceneManager.LoadScene("Hallway");
 
+    }
 
-     void Update()
+    void Update()
     {
         if(PlayerInput.text == CorrectCode)
         {
