@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Engine/Engine.unity
     guid: dd15008281ae649ff9432c400fb97853
+  - enabled: 1
+    path: Assets/Scenes/Quarters/Quarters.unity
+    guid: 78e60738b59e0df4798cbb364793e3ac
+  - enabled: 1
+    path: Assets/Scenes/Keypad/Keypad.unity
+    guid: e6dfdf821196c6244b07e19beb901bcf
   m_configObjects: {}
