@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameStoryVariableChangeEvent : UnityEngine.Events.UnityEvent<string, object> { }
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour
     public string InitialSceneName;
     public string NewGameScene;
     private string m_CurrentSceneName; //Used for saving / loading...
+    public Texture2D CursorTexture;
 
     #region SINGLETON PATTERN 
     private static int m_referenceCount = 0;
@@ -252,5 +254,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         LoadScene(InitialSceneName);
+        Cursor.SetCursor(CursorTexture, Vector2.zero, CursorMode.Auto);
     }
 }
