@@ -123,6 +123,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &432562718 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4784954830480310671, guid: 77fbc029c6e55b343936e3a7c0c0ce8c, type: 3}
+  m_PrefabInstance: {fileID: 90457390773282407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &432562721
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432562718}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &859395285
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BallMaze
       objectReference: {fileID: 0}
+    - target: {fileID: 4784954830480310671, guid: 77fbc029c6e55b343936e3a7c0c0ce8c, type: 3}
+      propertyPath: m_TagString
+      value: ElectroGoal
+      objectReference: {fileID: 0}
     - target: {fileID: 5355034811770804857, guid: 77fbc029c6e55b343936e3a7c0c0ce8c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.71671
@@ -270,8 +324,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4784954830480310671, guid: 77fbc029c6e55b343936e3a7c0c0ce8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 432562721}
+    - targetCorrespondingSourceObject: {fileID: 5501098391192647982, guid: 77fbc029c6e55b343936e3a7c0c0ce8c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 90457390773282409}
   m_SourcePrefab: {fileID: 100100000, guid: 77fbc029c6e55b343936e3a7c0c0ce8c, type: 3}
+--- !u!1 &90457390773282408 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5501098391192647982, guid: 77fbc029c6e55b343936e3a7c0c0ce8c, type: 3}
+  m_PrefabInstance: {fileID: 90457390773282407}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &90457390773282409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90457390773282408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2865e8ce59022c64a99c3092d95b4519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winScene: Akello Brig
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
