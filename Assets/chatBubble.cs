@@ -47,5 +47,7 @@ public class chatBubble : MonoBehaviour
     {
         yield return new WaitForSeconds(4.0f);
         shouldFade = true;
+        yield return new WaitForSeconds(1.0f);
+        Destroy(gameObject);
     }
 }

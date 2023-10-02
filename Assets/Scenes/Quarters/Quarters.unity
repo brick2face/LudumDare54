@@ -240,6 +240,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1 &1197392483 stripped
@@ -518,13 +520,13 @@ MonoBehaviour:
   GameStoryVariableType: 0
   GameStoryVariableValue: 
   ShouldDestroyOnInteract: 0
-  ShouldAddInventoryItemOnInteract: 1
+  ShouldAddInventoryItemOnInteract: 0
   InventoryItemToAdd: {fileID: 11400000, guid: 9fbaec72276b89b488fb72ca939dd8f7, type: 2}
   InventoryItemQuantity: 1
   ShouldConsumeInventoryItemOnInteract: 0
   InventoryItemToConsume: {fileID: 0}
   InventoryItemConsumeQuantity: 0
-  ShouldLoadSceneOnInteract: 1
+  ShouldLoadSceneOnInteract: 0
   SceneName: Quarters
   ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 0}
@@ -532,6 +534,10 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 1
   CanvasPrefab: {fileID: 67611256577595850, guid: 30840f2ea58c2b545af360753628d317, type: 3}
+  chatBubbleText: Text for canvas is really really longaText for canvas is really
+    really longaText for canvas is really really longaText for canvas is really really
+    longa
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1 &1817506750
@@ -592,10 +598,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: chatBubble
       objectReference: {fileID: 0}
+    - target: {fileID: 67611256577595850, guid: 30840f2ea58c2b545af360753628d317, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1471637124629124668, guid: 30840f2ea58c2b545af360753628d317, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1197392489}
+    - target: {fileID: 2382404006095236636, guid: 30840f2ea58c2b545af360753628d317, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2542577456420410528, guid: 30840f2ea58c2b545af360753628d317, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.47
@@ -928,6 +942,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 1474145255485304390, guid: 6c15688a86975004f849c17637373bca, type: 3}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

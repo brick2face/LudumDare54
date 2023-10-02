@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class InteractableObject : MonoBehaviour
 {
@@ -50,6 +53,8 @@ public class InteractableObject : MonoBehaviour
     [Header("UI Instantiate On Interact")]
     public bool ShouldInstantiatePrefabUIOnInteract = false;  // Whether or not this object should instantiate a UI object when interacted with
     public GameObject CanvasPrefab = null;              // The UI object to instantiate
+    public string chatBubbleText = "";                  // The text to display in the chat bubble
+    public TextMeshProUGUI text = null;
 
     [Header("UI Visibility Only On Interact")]
     public bool ShouldSetUIVisibleOnly = false;
@@ -122,6 +127,9 @@ public class InteractableObject : MonoBehaviour
         if (ShouldInstantiatePrefabUIOnInteract)
         {
             GameObject canvas = Instantiate(CanvasPrefab);
+            canvas.SetActive(true);
+            text = canvas.GetComponentInChildren<TextMeshProUGUI>();
+            text.text = chatBubbleText;
         }
 
         if (ShouldSetUIVisibleOnly)
