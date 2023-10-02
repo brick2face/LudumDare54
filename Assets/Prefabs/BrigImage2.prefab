@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 5529568793766715613}
   - component: {fileID: 5880040007562221126}
   m_Layer: 0
-  m_Name: Base World!
+  m_Name: BrigImage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
