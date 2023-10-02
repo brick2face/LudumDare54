@@ -241,12 +241,24 @@ MonoBehaviour:
   GameStoryVariableType: 0
   GameStoryVariableValue: true
   ShouldDestroyOnInteract: 0
+  ShouldAddInventoryItemOnInteract: 0
+  InventoryItemToAdd: {fileID: 0}
+  InventoryItemQuantity: 1
+  ShouldConsumeInventoryItemOnInteract: 0
+  InventoryItemToConsume: {fileID: 0}
+  InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 0
   SceneName: 
   ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 0}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
+  ShouldInstantiatePrefabUIOnInteract: 0
+  CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
+  ShouldSetUIVisibleOnly: 0
+  Panel: {fileID: 0}
 --- !u!1 &1197392483 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4330323576086716, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
@@ -393,7 +405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BGM: {fileID: 8300000, guid: 18b7b47fa97693147bc460c7623d6e6b, type: 3}
-  BG_Ambience: {fileID: 8300000, guid: 18b7b47fa97693147bc460c7623d6e6b, type: 3}
+  BG_Ambience: {fileID: 8300000, guid: 2c98ad77762c8af44a87bf5ba375fff3, type: 3}
 --- !u!1001 &5473607737842802114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -584,12 +596,24 @@ MonoBehaviour:
   GameStoryVariableType: 0
   GameStoryVariableValue: 
   ShouldDestroyOnInteract: 0
+  ShouldAddInventoryItemOnInteract: 0
+  InventoryItemToAdd: {fileID: 0}
+  InventoryItemQuantity: 1
+  ShouldConsumeInventoryItemOnInteract: 0
+  InventoryItemToConsume: {fileID: 0}
+  InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 0
   SceneName: 
   ShouldPlaySFXOnInteract: 1
   SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
+  ShouldInstantiatePrefabUIOnInteract: 0
+  CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
+  ShouldSetUIVisibleOnly: 0
+  Panel: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -265,8 +265,8 @@ MonoBehaviour:
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
   SceneName: Quarters
-  ShouldPlaySFXOnInteract: 0
-  SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
+  ShouldPlaySFXOnInteract: 1
+  SFXClip: {fileID: 8300000, guid: fa9ffe15f5684b44fad2d1a0b0edf618, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
@@ -1181,10 +1181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5529568793766715613, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1817506751}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7150154372246772143, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
       insertIndex: -1
@@ -1193,11 +1190,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1197392485}
   m_SourcePrefab: {fileID: 100100000, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
---- !u!4 &5473607737842802115 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5529568793766715613, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
-  m_PrefabInstance: {fileID: 5473607737842802114}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5473607737842802116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,8 +1344,8 @@ MonoBehaviour:
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
   SceneName: Engine
-  ShouldPlaySFXOnInteract: 0
-  SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
+  ShouldPlaySFXOnInteract: 1
+  SFXClip: {fileID: 8300000, guid: fa9ffe15f5684b44fad2d1a0b0edf618, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0

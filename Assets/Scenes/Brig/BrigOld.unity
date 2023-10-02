@@ -514,7 +514,7 @@ MonoBehaviour:
   ShouldLoadSceneOnInteract: 1
   SceneName: Hallway
   ShouldPlaySFXOnInteract: 0
-  SFXClip: {fileID: 0}
+  SFXClip: {fileID: 8300000, guid: fa9ffe15f5684b44fad2d1a0b0edf618, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0

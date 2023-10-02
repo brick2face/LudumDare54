@@ -6,16 +6,9 @@ using TMPro;
 
 public class KeyPad : MonoBehaviour
 {
-    /*
-    public Button Button1;
-    public Button Button2;
-    public Button Button3;
-    public Button Button4;
-    public Button Button5;
-    public Button Button6;
-    public Button Button7;
-    public Button Button8;
-    public Button Button9;*/
+    
+    public GameObject winButton;
+    
     public TMP_InputField PlayerInput;
     public string CorrectCode;
 
@@ -55,16 +48,18 @@ public class KeyPad : MonoBehaviour
     {
         PlayerInput.text = PlayerInput.text + "9";
     }
-
-    void Confirm()
+    public void ClearButton()
     {
-       if(PlayerInput.text==CorrectCode)
+        PlayerInput.text = null;
+    }
+
+
+     void Update()
+    {
+        if(PlayerInput.text == CorrectCode)
         {
-            //win
-        }
-        else
-        {
-            PlayerInput.text = null;
+            winButton.SetActive(true);
+            
         }
     }
 }
