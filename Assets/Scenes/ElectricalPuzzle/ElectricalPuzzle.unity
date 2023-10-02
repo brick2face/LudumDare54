@@ -462,6 +462,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6261820031909964897, guid: 8b4fb835eb70a4644a2fac9257b3ee35, type: 3}
+      propertyPath: Winscene
+      value: Victory
+      objectReference: {fileID: 0}
     - target: {fileID: 7407855467606360955, guid: 8b4fb835eb70a4644a2fac9257b3ee35, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
