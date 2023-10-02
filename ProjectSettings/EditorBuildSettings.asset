@@ -38,9 +38,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Keypad/Keypad.unity
     guid: e6dfdf821196c6244b07e19beb901bcf
-    path: Assets/Scenes/Brig/Akello Brig.unity
-    guid: 07c254d7cec93724e9fa5ca27e9b14e6
   - enabled: 1
     path: Assets/Scenes/BallPuzzle/BallTestScene.unity
     guid: 1c25137956838b44b83f57db58d32adc
+  - enabled: 1
+    path: Assets/Scenes/Brig/Akello Brig.unity
+    guid: 07c254d7cec93724e9fa5ca27e9b14e6
   m_configObjects: {}
