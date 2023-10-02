@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InitialSceneName: MainMenu
-  NewGameScene: Brig_2_Testing
+  NewGameScene: Novel_Scene_Pg1
   CursorTexture: {fileID: 2800000, guid: 476c1a48b9a65574daec1157a7672939, type: 3}
 --- !u!1 &943605011
 GameObject:
