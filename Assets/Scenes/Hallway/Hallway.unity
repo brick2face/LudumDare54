@@ -265,8 +265,8 @@ MonoBehaviour:
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
   SceneName: Quarters
-  ShouldPlaySFXOnInteract: 0
-  SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
+  ShouldPlaySFXOnInteract: 1
+  SFXClip: {fileID: 8300000, guid: fa9ffe15f5684b44fad2d1a0b0edf618, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
@@ -501,8 +501,8 @@ MonoBehaviour:
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
   SceneName: Brig
-  ShouldPlaySFXOnInteract: 0
-  SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
+  ShouldPlaySFXOnInteract: 1
+  SFXClip: {fileID: 8300000, guid: fa9ffe15f5684b44fad2d1a0b0edf618, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
@@ -929,52 +929,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1817506750
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1817506751}
-  - component: {fileID: 1817506752}
-  m_Layer: 0
-  m_Name: BackgroundAudio
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1817506751
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817506750}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5473607737842802115}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1817506752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817506750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f068c442a9abfd4caa7d07e205fa86f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BGM: {fileID: 8300000, guid: 18b7b47fa97693147bc460c7623d6e6b, type: 3}
-  BG_Ambience: {fileID: 0}
 --- !u!1001 &2032247268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1181,10 +1135,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5529568793766715613, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1817506751}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7150154372246772143, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
       insertIndex: -1
@@ -1193,11 +1144,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1197392485}
   m_SourcePrefab: {fileID: 100100000, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
---- !u!4 &5473607737842802115 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5529568793766715613, guid: bb127b4039fd5194caf9caeeba7da482, type: 3}
-  m_PrefabInstance: {fileID: 5473607737842802114}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5473607737842802116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,8 +1298,8 @@ MonoBehaviour:
   InventoryItemConsumeQuantity: 1
   ShouldLoadSceneOnInteract: 1
   SceneName: Engine
-  ShouldPlaySFXOnInteract: 0
-  SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
+  ShouldPlaySFXOnInteract: 1
+  SFXClip: {fileID: 8300000, guid: fa9ffe15f5684b44fad2d1a0b0edf618, type: 3}
   ShouldPlaySFXOnHover: 0
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
