@@ -59,7 +59,7 @@ public class KeyPad : MonoBehaviour
 
     }
 
-    }
+    
 
     void Update()
     {
@@ -70,3 +70,4 @@ public class KeyPad : MonoBehaviour
         }
     }
 }
+

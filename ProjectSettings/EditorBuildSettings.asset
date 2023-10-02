@@ -50,6 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/Victory.unity
     guid: d88dea59f60e2be46a81f4616263cdf8
+  - enabled: 1
     path: Assets/Scenes/ElectricalPuzzle/ElectricalPuzzle.unity
     guid: 5ca854fb92a2f8e41b6c45212f8c5f1f
   m_configObjects: {}
