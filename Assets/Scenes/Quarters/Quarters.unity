@@ -742,7 +742,7 @@ MonoBehaviour:
   InventoryItemToConsume: {fileID: 0}
   InventoryItemConsumeQuantity: 0
   ShouldLoadSceneOnInteract: 1
-  SceneName: Quarters
+  SceneName: Hallway
   ShouldPlaySFXOnInteract: 0
   SFXClip: {fileID: 8300000, guid: 7d2b1e24a3fa9e84294fa29ea7f8c580, type: 3}
   ShouldPlaySFXOnHover: 0
