@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class KeyPad : MonoBehaviour
 {
@@ -51,6 +52,11 @@ public class KeyPad : MonoBehaviour
     public void ClearButton()
     {
         PlayerInput.text = null;
+    }
+    public void exitkeypad()
+    {
+        SceneManager.LoadScene("Hallway");
+
     }
 
 
