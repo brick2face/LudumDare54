@@ -23,14 +23,15 @@ public class ElectroBall : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag=="Paddle")
+        if (other.tag == "Paddle")
         {
             ElectricSpawner.instance.ChargeBar();
             Destroy(gameObject);
         }
-        if(other.tag=="ElectroGoal")
+        if (other.tag == "ElectroGoal")
         {
-            Destroy(other);
+            ElectricSpawner.instance.UnChargeBar();
+            Destroy(gameObject);
         }
     }
 }
