@@ -144,6 +144,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
@@ -169,11 +173,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.69071394
+      value: 0.8921952
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3946084
+      value: 2.4769466
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2917
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -263,6 +271,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1 &31719966
@@ -370,6 +380,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
@@ -395,11 +409,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.69071394
+      value: 0.84944
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.3946084
+      value: 2.465441
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2298
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -489,6 +507,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1001 &218584731
@@ -511,6 +531,10 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 263ad3f0a5913c54b916ecf5c9272caa, type: 3}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Color.b
       value: 0
@@ -535,13 +559,37 @@ PrefabInstance:
       propertyPath: m_MaskInteraction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Size.x
+      value: 3.7465458
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Size.y
+      value: 5.1456842
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.6103425
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.019372463
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 5.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700553785005439865, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.12
+      objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.8898624
+      value: 0.3307259
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.40862027
+      value: 0.8683181
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -557,7 +605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071067
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -569,7 +617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.70710695
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -581,7 +629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -631,6 +679,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1 &366633397 stripped
@@ -649,6 +699,10 @@ PrefabInstance:
     - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Name
       value: Object Sets Visibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 2185644154900751799, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_FlipX
@@ -770,6 +824,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1 &1197392483 stripped
@@ -940,6 +996,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
@@ -1059,6 +1119,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1001 &5473607737842802114
@@ -1169,6 +1231,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4871715295795196825, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
@@ -1194,11 +1260,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8783369
+      value: 1.3131137
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0445817
+      value: 1.5616496
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.495
       objectReference: {fileID: 0}
     - target: {fileID: 8022185027561907457, guid: 72079f2614d6cee46b2b1ca3275dcc2a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1288,6 +1358,8 @@ MonoBehaviour:
   HoverSFXClip: {fileID: 0}
   ShouldInstantiatePrefabUIOnInteract: 0
   CanvasPrefab: {fileID: 0}
+  chatBubbleText: 
+  text: {fileID: 0}
   ShouldSetUIVisibleOnly: 0
   Panel: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
