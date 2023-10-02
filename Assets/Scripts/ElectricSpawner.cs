@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ElectricSpawner : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class ElectricSpawner : MonoBehaviour
     public float MaxCharge = 100;
     public Slider ChargeSlider;
     public int ChargePerBar;
+    public string Winscene;
     void Start()
     {
         instance = this;
@@ -24,6 +26,10 @@ public class ElectricSpawner : MonoBehaviour
     void Update()
     {
         SpawnElectroballs();
+        if(MaxCharge == AmountOfCharge)
+        {
+            SceneManager.LoadScene(Winscene);
+        }
 
     }
 
@@ -48,11 +54,11 @@ public class ElectricSpawner : MonoBehaviour
     public void UnChargeBar()
     {
         AmountOfCharge -= 30;
-        if (AmountOfCharge < 0)
+        if (AmountOfCharge <0)
         {
             AmountOfCharge = 0;
         }
-        ChargeSlider.value = AmountOfCharge;
-
+            ChargeSlider.value = AmountOfCharge;
+        
     }
 }

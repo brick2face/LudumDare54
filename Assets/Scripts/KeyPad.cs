@@ -59,6 +59,8 @@ public class KeyPad : MonoBehaviour
 
     }
 
+    }
+
     void Update()
     {
         if(PlayerInput.text == CorrectCode)
