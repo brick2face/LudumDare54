@@ -30,7 +30,8 @@ public class ElectroBall : MonoBehaviour
         }
         if(other.tag=="ElectroGoal")
         {
-            Destroy(other);
+            ElectricSpawner.instance.UnChargeBar();
+            Destroy(gameObject);
         }
     }
 }

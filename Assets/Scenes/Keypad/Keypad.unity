@@ -3098,7 +3098,7 @@ MonoBehaviour:
   ExpectedVariableType: 0
   ExpectedVariableValue: 
   ShouldSetGameStoryVariableOnInteract: 1
-  GameStoryVariableKey: EngineRoomUnlock
+  GameStoryVariableKey: bHasCompletedPuzzle
   GameStoryVariableType: 0
   GameStoryVariableValue: true
   ShouldDestroyOnInteract: 0

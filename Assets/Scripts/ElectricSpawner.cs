@@ -45,4 +45,14 @@ public class ElectricSpawner : MonoBehaviour
         AmountOfCharge += ChargePerBar;
         ChargeSlider.value = AmountOfCharge;
     }
+    public void UnChargeBar()
+    {
+        AmountOfCharge -= 30;
+        if (AmountOfCharge <0)
+        {
+            AmountOfCharge = 0;
+        }
+            ChargeSlider.value = AmountOfCharge;
+        
+    }
 }
