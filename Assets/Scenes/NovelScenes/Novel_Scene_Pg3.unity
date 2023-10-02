@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_NextButton: {fileID: 1981767124}
-  DestinationSceneName: Brig
+  DestinationSceneName: Akello Brig
 --- !u!114 &139098286
 MonoBehaviour:
   m_ObjectHideFlags: 0
